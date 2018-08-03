@@ -1,0 +1,207 @@
+FDLMC1970:~ sharmilap$ git --version
+git version 2.15.1 (Apple Git-101)
+
+FDLMC1970:~ sharmilap$ git config --global user.name "psharmila"
+
+FDLMC1970:~ sharmilap$ git config --global user.email "sharmi.prs@gmail.com"
+
+FDLMC1970:~ sharmilap$ git config --global user.email
+sharmi.prs@gmail.com
+
+FDLMC1970:~ sharmilap$ git config --global core.autocrlf input
+
+FDLMC1970:~ sharmilap$ git config --list
+credential.helper=osxkeychain
+user.name=psharmila
+user.email=sharmi.prs@gmail.com
+core.autocrlf=input
+
+FDLMC1970:git-learning sharmilap$ git clone https://github.com/psharmila/hands-on-training.git
+Cloning into 'hands-on-training'...
+remote: Counting objects: 13, done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 13 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (13/13), done.
+FDLMC1970:git-learning sharmilap$ 
+
+FDLMC1970:git-learning sharmilap$ cd hands-on-training/
+
+FDLMC1970:hands-on-training sharmilap$ ls
+README.md	_config.yml
+
+FDLMC1970:hands-on-training sharmilap$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+FDLMC1970:hands-on-training sharmilap$ git checkout training-branch
+Branch 'training-branch' set up to track remote branch 'training-branch' from 'origin'.
+Switched to a new branch 'training-branch'
+
+FDLMC1970:hands-on-training sharmilap$ ls
+Git_documentation	README.md
+
+FDLMC1970:hands-on-training sharmilap$ git status
+On branch training-branch
+Your branch is up to date with 'origin/training-branch'.
+
+nothing to commit, working tree clean
+
+FDLMC1970:hands-on-training sharmilap$ vi Git_documentation
+
+-------> Add a file to the local repository
+
+FDLMC1970:hands-on-training sharmilap$ git status
+On branch training-branch
+Your branch is up to date with 'origin/training-branch'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	doubts
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+FDLMC1970:hands-on-training sharmilap$ git add doubts.txt
+
+FDLMC1970:hands-on-training sharmilap$ git status
+On branch training-branch
+Your branch is up to date with 'origin/training-branch'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   doubts.txt
+
+FDLMC1970:hands-on-training sharmilap$ git commit
+[training-branch e400963] Documenting the doubts that we get while learning git
+ 1 file changed, 1 insertion(+)
+ create mode 100644 doubts.txt
+
+FDLMC1970:hands-on-training sharmilap$ 
+--------------------------------------------------------------GIT LOG----------------------------------------------------
+FDLMC1970:hands-on-training sharmilap$ git log
+
+commit e400963198baecf7e8f581d37cce18de6f3fd6da (HEAD -> training-branch)
+Author: psharmila <sharmi.prs@gmail.com>
+Date:   Fri Aug 3 16:03:25 2018 +0530
+
+    Documenting the doubts that we get while learning git
+
+commit a7367c7ab26f4eabb3d0afd03feafddf5dccb738 (origin/training-branch)
+Author: psharmila <32357317+psharmila@users.noreply.github.com>
+Date:   Fri Aug 3 14:40:13 2018 +0530
+
+    Create Git_documentation
+    
+    Step by step procedure for learning git
+
+commit 9e4ed8886b3a36970037c9ebcc12bf488b96a116
+Merge: 856cdfa efe01c5
+Author: psharmila <32357317+psharmila@users.noreply.github.com>
+Date:   Fri Aug 3 14:07:59 2018 +0530
+
+    Merge pull request #1 from kamalakannan-chockalingam/new_branch
+    
+    updated read me
+
+:...skipping...
+commit e400963198baecf7e8f581d37cce18de6f3fd6da (HEAD -> training-branch)
+Author: psharmila <sharmi.prs@gmail.com>
+Date:   Fri Aug 3 16:03:25 2018 +0530
+
+    Documenting the doubts that we get while learning git
+
+commit a7367c7ab26f4eabb3d0afd03feafddf5dccb738 (origin/training-branch)
+Author: psharmila <32357317+psharmila@users.noreply.github.com>
+Date:   Fri Aug 3 14:40:13 2018 +0530
+
+    Create Git_documentation
+    
+    Step by step procedure for learning git
+
+commit 9e4ed8886b3a36970037c9ebcc12bf488b96a116
+Merge: 856cdfa efe01c5
+Author: psharmila <32357317+psharmila@users.noreply.github.com>
+Date:   Fri Aug 3 14:07:59 2018 +0530
+
+    Merge pull request #1 from kamalakannan-chockalingam/new_branch
+    
+    updated read me
+
+commit efe01c519fbcc2fce46f98ce414b43c2e90ba5b5
+:...skipping...
+commit e400963198baecf7e8f581d37cce18de6f3fd6da (HEAD -> training-branch)
+Author: psharmila <sharmi.prs@gmail.com>
+Date:   Fri Aug 3 16:03:25 2018 +0530
+
+    Documenting the doubts that we get while learning git
+
+commit a7367c7ab26f4eabb3d0afd03feafddf5dccb738 (origin/training-branch)
+Author: psharmila <32357317+psharmila@users.noreply.github.com>
+Date:   Fri Aug 3 14:40:13 2018 +0530
+
+    Create Git_documentation
+    
+    Step by step procedure for learning git
+
+commit 9e4ed8886b3a36970037c9ebcc12bf488b96a116
+Merge: 856cdfa efe01c5
+Author: psharmila <32357317+psharmila@users.noreply.github.com>
+Date:   Fri Aug 3 14:07:59 2018 +0530
+
+    Merge pull request #1 from kamalakannan-chockalingam/new_branch
+    
+    updated read me
+
+commit efe01c519fbcc2fce46f98ce414b43c2e90ba5b5
+Author: kamalakannan chockalingam <41687640+kamalakannan-chockalingam@users.noreply.github.com>
+Date:   Fri Aug 3 14:01:40 2018 +0530
+
+    updated read me
+
+commit 856cdfae89c558b7a983ea9cb020e047700a0e7e
+Author: psharmila <32357317+psharmila@users.noreply.github.com>
+Date:   Fri Aug 3 13:53:39 2018 +0530
+
+    Initial commit
+
+-----------------------------------------------------Pushing the code from local repository to our repository ------------------------------
+
+FDLMC1970:hands-on-training sharmilap$ git push -u origin training-branch
+Username for 'https://github.com': psharmila
+Password for 'https://psharmila@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 377 bytes | 377.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/psharmila/hands-on-training.git
+   a7367c7..e400963  training-branch -> training-branch
+Branch 'training-branch' set up to track remote branch 'training-branch' from 'origin'.
+FDLMC1970:hands-on-training sharmilap$ 
+
+----------------------------------------------------After merginig the changes in master, to update our local repository master-------------------
+
+FDLMC1970:hands-on-training sharmilap$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+FDLMC1970:hands-on-training sharmilap$ git pull
+remote: Counting objects: 2, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), done.
+From https://github.com/psharmila/hands-on-training
+   db5c0d0..d409c56  master     -> origin/master
+Updating db5c0d0..d409c56
+Fast-forward
+ Git_documentation | 6 ++++++
+ doubts.txt        | 1 +
+ 2 files changed, 7 insertions(+)
+ create mode 100644 Git_documentation
+ create mode 100644 doubts.txt
+
+FDLMC1970:hands-on-training sharmilap$ 
+
