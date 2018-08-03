@@ -205,3 +205,61 @@ Fast-forward
 
 FDLMC1970:hands-on-training sharmilap$ 
 
+
+-----------------------------------------------------------DS_Store and gitignore files----------------------------------------------------------
+
+- we may get .DS_Store file error while checking the git status
+FDLMC1970:hands-on-training sharmilap$ git add .DS_Store
+
+FDLMC1970:hands-on-training sharmilap$ git commit -m "added..."
+[master 72dd79c] added...
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .DS_Store
+
+FDLMC1970:hands-on-training sharmilap$ git rm --cached .DS_Store
+rm '.DS_Store'
+FDLMC1970:hands-on-training sharmilap$ git commit -m "..."
+[master c647319] ...
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 .DS_Store
+
+FDLMC1970:hands-on-training sharmilap$ git push -u origin master
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 727 bytes | 727.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/psharmila/hands-on-training.git
+   ecb9955..c647319  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+---Create a local gitignore file and add .DS_Store in it and save it and push it to the master
+
+FDLMC1970:hands-on-training sharmilap$ vi .gitignore
+
+FDLMC1970:hands-on-training sharmilap$ git add .gitignore
+
+FDLMC1970:hands-on-training sharmilap$ git commit -m "adding git ignore file"
+[master bbcc5c2] adding git ignore file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+FDLMC1970:hands-on-training sharmilap$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 285 bytes | 285.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/psharmila/hands-on-training.git
+   c647319..bbcc5c2  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+FDLMC1970:hands-on-training sharmilap$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+FDLMC1970:hands-on-training sharmilap$ 
+
